@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import imagen from "../assets/img/header-simpsons.gif"
 
 const Navbar = () => {
@@ -12,16 +13,16 @@ const Navbar = () => {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/inicio">Inicio</a>
+          <Link class="nav-link active" aria-current="page" to="/inicio">Inicio</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/personajes">Personajes</a>
+          <Link class="nav-link" aria-current="page" to="/personajes">Personajes</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/blog">Blog</a>
+          <Link class="nav-link" to="/blog">Blog</Link>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="/contacto">Contacto</a>
+        <Link class="nav-link" to="/contacto">Contacto</Link>
         </li>
       </ul>
       <form class="d-flex">
