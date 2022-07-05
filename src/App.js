@@ -1,26 +1,24 @@
-import logo from '../src/img/logo-circular-texto.png';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from "./componentes/Navbar";
+import Carrusel from "./componentes/Carrusel";
+import Card from "./componentes/Card";
+import Footer from "./componentes/Footer";
+import Blog from "./componentes/Blog";
+import Form from "./componentes/form";
+
 
 function App() {
   return (
-    <div className="container-fluid">
-      <header className="container-fluid d-flex flex-column align-items-center mt-5">
-      <h1 className="text-center">Bienvenido al template simple de React</h1>
-         <div className="w-25">
-        <img src={logo} className="w-100" alt="logo" />
-         </div>
-        <p>
-          Edita <code>src/App.js</code> y salva el cambio para recargar.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Aprendé React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+      <Route path='/inicio' element={<Carrusel />}> </Route>
+      <Route path='/personajes' element={<Card />}> </Route>
+      <Route path='/blog' element={<Blog />}> </Route>
+      <Route path='/contacto' element={<Form />}> </Route>
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
